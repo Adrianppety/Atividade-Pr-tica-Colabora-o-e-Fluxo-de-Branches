@@ -32,6 +32,9 @@ while(true){
         case 4:
             reduzirMarcha(carro);
             break;
+        case 5:
+            console.table(carro);
+            break;
 
         default:
             break;
