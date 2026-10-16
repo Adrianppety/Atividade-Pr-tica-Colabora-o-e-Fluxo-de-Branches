@@ -26,6 +26,12 @@ while(true){
         case 2:
             frear(carro);
             break;
+        case 3:
+            subirMarcha(carro);
+            break;
+        case 4:
+            reduzirMarcha(carro);
+            break;
 
         default:
             break;
@@ -44,6 +50,16 @@ function frear(veiculo: Veiculo): void{
         veiculo.velocidade -= veiculo.potencia*0.1;
         if(veiculo.velocidade < 0) veiculo.velocidade = 0;
         console.log(veiculo.velocidade);
+    }}
+function subirMarcha(veiculo: Veiculo): void{
+    if(veiculo.marchaAtual < veiculo.numeroMarchas){
+        veiculo.marchaAtual++;
+        console.log("Marcha atual: " + veiculo.marchaAtual);
+    }}
+function reduzirMarcha(veiculo: Veiculo): void{
+    if(veiculo.marchaAtual > 0){
+        veiculo.marchaAtual--;
+        console.log("Marcha atual: " + veiculo.marchaAtual);
     }}
 
 function criaVeiculo(): Veiculo{
